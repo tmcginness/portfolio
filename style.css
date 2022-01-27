@@ -1,7 +1,16 @@
+:root {
+    --blue: #181d66;
+    --grey: #585c6e;
+}
+
 .topnav {
-    background-color: #92B2B9;
+    background-color: var(--grey);
+    width: 100%;
     overflow: hidden;
     display: flex;
+    position: sticky;
+    z-index: 1;
+    align-items: center;
     justify-content: space-around;
     margin-bottom: 20px;
 }
@@ -20,6 +29,147 @@
 /* Change the color of links on hover */
 
 .topnav a:hover {
-    background-color: #f0a8bb;
+    background-color: var(--blue);
     color: white;
+}
+
+.mobile-menu {
+    color: white;
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+/* Homepage hero styles */
+
+.hero {
+    display: flex;
+    background: url("./imgs/hero.jpeg");
+    align-items: center;
+    justify-content: end;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+}
+
+.blurb {
+    width: 30%;
+    padding: 0.625rem;
+    border-radius: 6px;
+    box-shadow: 0px 2px 15px 2px;
+    background-color: rgba(255, 255, 255, 0.678);
+    margin: 10%;
+}
+
+.blurb p {
+    line-height: 1.4;
+}
+
+/* End homepage hero styles */
+
+/* About me styling */
+
+.heading {
+    text-align: center;
+    font-size: 3em;
+}
+
+.about p {
+    font-size: 20px;
+}
+
+#sig {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#sig img {
+    width: 30%;
+}
+
+.row {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+}
+
+.column {
+    flex: 50%;
+    padding: 50px;
+}
+
+/* End about me  styles */
+
+/* Footer Styles */
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 2.1rem;
+    line-height: 3rem;
+    color: white;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: white;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.socials li {
+    margin: 0 15px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+footer {
+    background-color: var(--grey);
+    padding: 1rem;
+    text-align: center;
+    margin: 2rem 0 0;
+}
+
+/* End footer styles */
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+    .row {
+        display: block;
+        width: 100%;
+    }
+    .column {
+        padding: 10px;
+    }
+    #cubs {
+        width: 100%;
+    }
+    #sig {
+        width: 100%;
+    }
 }

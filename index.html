@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     <script src="app.js" charset="utf-8"></script>
@@ -13,13 +15,56 @@
 </head>
 
 <body>
-    <div class="topnav">
-        <a href="#">about</a>
-        <a href="#">collections</a>
-        <a href="#">delivery service</a>
-        <a href="#">location</a>
-        <a href="#">contact us</a>
-    </div>
+    <nav>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="bio.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact Me</a>
+            <button class="mobile-menu" id="mobile-menu">
+                <ion-icon class="bars" name="menu-outline"></ion-icon>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Image by Negative Space https://www.pexels.com/photo/grayscale-photo-of-computer-laptop-near-white-notebook-and-ceramic-mug-on-table-169573/ -->
+    <section class="hero" id="hero">
+
+        <div class="blurb">
+            <h2 class="blurbTitle">Hey, I'm Ted</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed dolorem fugit sapiente porro veniam pariatur dolore
+                nostrum delectus inventore tempore minus nemo, iste ullam illo laboriosam maiores repudiandae quos!
+            </p>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-content">
+            <h3>Ted McGinness</h3>
+            <p></p>
+
+            <ul class="socials">
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
 </body>
 
 </html>
