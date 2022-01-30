@@ -2,6 +2,7 @@
     --blue: #181d66;
     --grey: #585c6e;
     --offwhite: #f5f5f5;
+    --lightblue: #26ACE2;
     --box-shadow: 0 6px 6px -6px rgba(0, 0, 0, .5);
 }
 
@@ -11,6 +12,11 @@ body {
 
 ul {
     list-style: none;
+}
+
+a:visited {
+    text-decoration: none;
+    decoration: none;
 }
 
 .nav {
@@ -52,7 +58,7 @@ ul {
     border-bottom: 1px solid var(--grey);
 }
 
-.mobile-menu {
+.mobileMenu {
     color: white;
     font-size: 2rem;
     border: 0;
@@ -164,17 +170,24 @@ ul {
     padding: 18px;
     width: 100%;
     border: none;
-    text-align: left;
+    text-align: center;
     outline: none;
     font-size: 15px;
     transition: 0.4s;
+}
+
+.readMore a {
+    color: black;
+    line-height: 1.2;
+    font-size: 20px;
 }
 
 .accordion:hover {
     background-color: #ccc;
 }
 
-.panel {
+.readMore {
+    font-size: 20px;
     padding: 0 18px;
     display: none;
     background-color: white;
@@ -202,6 +215,10 @@ ul {
     margin: 25px;
     height: 100%;
     line-height: 2;
+}
+
+#sidebar ul {
+    padding: 0;
 }
 
 #sidebar img {
@@ -256,6 +273,7 @@ ul {
 /* start contact page styles */
 
 .contact {
+    margin-top: 20px;
     width: 100%;
     background: white;
     display: flex;
@@ -276,6 +294,7 @@ ul {
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
     background-color: var(--offwhite);
     padding: 0 25px 0px 25px;
     margin-right: 25px;
@@ -287,14 +306,24 @@ ul {
 
 .leftbox {
     margin: 0 25px 0 25px;
-    width: 100%;
     background-color: var(--offwhite);
     box-shadow: var(--box-shadow);
 }
 
+.leftbox ul {
+    padding: 0;
+}
+
+.leftbox a {
+    color: black;
+    line-height: 2;
+    font-size: 22px;
+    text-decoration: none;
+}
+
 .rightbox {
-    margin-bottom: 12.5px;
-    width: 100%;
+    background: url("./imgs/contact.jpeg");
+    background-size: cover;
 }
 
 /* .resumeCard {
@@ -345,6 +374,7 @@ ul {
 }
 
 footer {
+    margin-top: 20px;
     background-color: var(--offwhite);
     padding: 1rem;
     text-align: center;

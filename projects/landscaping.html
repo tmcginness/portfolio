@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landscaping Game!</title>
+</head>
+
+<body>
+    <h1>Landscaping!!</h1>
+
+    <div>
+        <h3>Current Tool:</h3>
+        <p id="tool">You are using your teeth</p>
+    </div>
+    <div>
+        <h3>Money in wallet:</h3>
+        <p id="wallet">$0</p>
+    </div>
+    <div>
+        <h3>Earning per day:</h3>
+        <p id="earn">$1</p>
+    </div>
+    <div id="work">
+        <button style="margin:20px;" type="button" onclick="workADay(), updateSummary(), winnerWinner()">Work An Honest Day</button>
+        <button style="margin:20px;" type="button" onclick="upgradeTeeth()">Buy Rusty Scissorss For $5</button>
+        <button style="margin:20px;" type="button" onclick="upgradeScissors()">Buy A Push Mower For $25</button>
+        <button style="margin:20px;" type="button" onclick="upgradeMower()">Buy A Battery-Powered Mower For $250</button>
+        <button style="margin:20px;" type="button" onclick="upgradeBattery()"> Hire A Team Of Starving Students For $500</button>
+    </div>
+    <div>
+        <p id="summary"></p>
+    </div>
+    <div style="visibility:hidden;">
+        <button id="reset" style="margin:20px;" type="button" onclick="reset()"> Play Again!</button>
+    </div>
+
+
+    <script src="landscaping.js"></script>
+</body>
+
+</html>

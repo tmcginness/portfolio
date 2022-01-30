@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="click.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="click.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Click Battle!</title>
+</head>
+
+<body>
+    <!-- Created with Joey Kozak -->
+    <button id="openModal">About the game</button>
+    <div id="modal">
+        <div id="modal-textbox">
+
+            <h2>Learn To Play Click Battle!</h2>
+            <p>Easy to play, impossible to win!!</p>
+            <p>To start, simply press 'Begin Game' </p>
+            <p>Immediately after beginning the game, you'll click the 'Click Fast' button as fast as you can, racing the computer.</p>
+            <p>Whoever reaches 25 first, wins!</p>
+            <p>You also start off with 10 bombs, press the 'F' key to use a bomb. Bombs reset the computer's score to 0. Use
+                them wisely!</p>
+            <p></p>
+            <div class="footer">
+                <button class="modal-buttons" id="close" href="#">Close</button>
+            </div>
+        </div>
+
+    </div>
+    <h1>Welcome to Click Battle!!!!</h1>
+    <div>
+        <h2>Level:</h2>
+        <p id="level">1</p>
+
+    </div>
+
+    <div class="clickCounter" id="computer">
+        <h2>Computer Score:</h2>
+        <p id="computerScore">0</p>
+    </div>
+    <div id="player">
+        <h2>Player Score:</h2>
+        <p id="playerScore">0</p>
+        <!-- Begin Game -->
+    </div>
+    <div class="buttons">
+        <button class="" id="start">Begin Game!</button>
+        <!-- Click to increase score -->
+        <button class=" hide" id="clickHere">Click Fast!</button>
+        <!-- Add 1 to level -->
+        <button class="hide" id="increaseLevel">Next Level!</button>
+        <button class="hide" id="tryAgain">Try This Level Again!</button>
+        <button class=" hide" id="startOver">Start Over!</button>
+    </div>
+
+    <div>
+        <p id="summary"></p>
+    </div>
+</body>
+
+</html>

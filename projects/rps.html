@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="rps.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <h1>Rock Paper Scissors!</h1>
+
+    <button id="rock" onclick="rock(); computerChoose(); winnerWinner();">
+        I Choose Rock!
+    </button>
+
+    <button id="paper" onclick="paper(); computerChoose(); winnerWinner();">
+        I Choose Paper!
+    </button>
+
+    <button id="scissors" onclick="scissors(); computerChoose(); winnerWinner();">
+        I Choose Scissors!
+    </button>
+
+    <p id="plays" style="font-size: 24px; font-weight: bold; color: black;">
+    </p>
+
+    <p id="comp" style="font-size: 24px; font-weight: bold; color: black;">
+    </p>
+
+    <h2>Winner:</h2>
+    <p id="winner" style="font-size: 24px; font-weight: bold; color: black;"></p>
+
+
+</body>
+
+</html>
