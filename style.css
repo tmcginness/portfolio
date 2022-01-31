@@ -27,7 +27,7 @@ a:visited {
 .topnav {
     background-color: var(--offwhite);
     width: 100%;
-    height: 100px;
+    padding: 25px 0 25px 0;
     overflow: hidden;
     display: flex;
     position: sticky;
@@ -52,6 +52,7 @@ a:visited {
 
 .topnav a:hover {
     border-bottom: 1px solid var(--grey);
+    padding: 13px 16px;
 }
 
 .topnav a.active {
@@ -59,7 +60,7 @@ a:visited {
 }
 
 .mobileMenu {
-    color: white;
+    color: var(--grey);
     font-size: 2rem;
     border: 0;
     background-color: transparent;
@@ -106,6 +107,13 @@ a:visited {
     font-size: 20px;
 }
 
+.cubs {
+    min-height: 400px;
+    background: url("./imgs/ted-wife-cubs.jpg");
+    background-size: cover;
+    background-position: 25%;
+}
+
 #sig {
     text-align: center;
     margin: 0 auto;
@@ -117,15 +125,20 @@ a:visited {
 
 .row {
     display: flex;
-    width: 80%;
     margin: auto;
     justify-content: center;
     align-content: center;
+    margin: 25px auto;
+    width: 90%;
 }
 
 .column {
     flex: 50%;
-    padding: 50px;
+    padding: 25px;
+}
+
+.about a {
+    color: black;
 }
 
 /* End about me styles */
@@ -163,6 +176,8 @@ a:visited {
 
 /* Style the buttons that are used to open and close the accordion panel */
 
+/* Credit to https://www.w3schools.com/howto/howto_js_accordion.asp */
+
 .accordion {
     background-color: #eee;
     color: #444;
@@ -170,7 +185,7 @@ a:visited {
     padding: 18px;
     width: 100%;
     border: none;
-    text-align: center;
+    text-align: left;
     outline: none;
     font-size: 15px;
     transition: 0.4s;
@@ -184,6 +199,18 @@ a:visited {
 
 .accordion:hover {
     background-color: #ccc;
+}
+
+.accordion.active:after {
+    content: "\2212";
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
 }
 
 .readMore {
@@ -211,9 +238,7 @@ a:visited {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 350px;
     margin: 25px;
-    height: 100%;
     line-height: 2;
 }
 
@@ -227,7 +252,6 @@ a:visited {
 
 .sidebarContainer {
     margin: 0 25px 0 25px;
-    height: 800px;
     background-color: var(--offwhite);
     box-shadow: var(--box-shadow);
 }
@@ -274,7 +298,6 @@ a:visited {
 
 .contact {
     margin-top: 20px;
-    width: 100%;
     background: white;
     display: flex;
     flex-direction: row;
@@ -293,8 +316,6 @@ a:visited {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
     background-color: var(--offwhite);
     padding: 0 25px 0px 25px;
     margin-right: 25px;
@@ -378,15 +399,47 @@ footer {
     background-color: var(--offwhite);
     padding: 1rem;
     text-align: center;
-    width: 100%;
     box-shadow: var(--box-shadow);
 }
 
 /* End footer styles */
 
-/* Media Queries */
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
+    /* Mobile Menu from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+    .topnav button {
+        float: right;
+        display: block;
+    }
+    .topnav a {
+        display: none;
+    }
+    .topnav a.active {
+        border: none;
+    }
+    .topnav .mobileMenu {
+        float: right;
+        display: block;
+    }
+    .topnav.responsive {
+        position: relative;
+        display: block;
+    }
+    .topnav.responsive .mobileMenu {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+    }
+    .hero {
+        justify-content: center;
+    }
+    .blurb {
+        width: 50%;
+        font-size: 24px;
+    }
     .row {
         display: block;
         width: 100%;
@@ -397,7 +450,79 @@ footer {
     #cubs {
         width: 100%;
     }
+    section {
+        margin: 25px;
+    }
+    .projectsContainer {
+        flex-wrap: wrap;
+    }
+    .projectCard {
+        width: 80%;
+        margin: auto;
+    }
+    .projects {
+        padding: 0px;
+    }
+    .resumeContainer {
+        margin: 25px auto;
+    }
+    footer {
+        width: inherit;
+    }
+    .leftbox,
+    .rightbox {
+        margin: 0;
+    }
+    .leftbox {
+        margin-right: 25px;
+    }
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+    section {
+        margin: 15px;
+    }
+    .hero {
+        justify-content: center;
+    }
+    .blurb {
+        width: 90%;
+        font-size: 18px;
+    }
     #sig {
         width: 100%;
+    }
+    #sig img {
+        width: 50%;
+    }
+    .projectsContainer {
+        display: block;
+    }
+    .projectCard {
+        width: 90%;
+        margin: auto;
+    }
+    .sidebarContainer {
+        text-align: center;
+    }
+    .resumeContainer {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .resumeCard {
+        text-align: center;
+        margin: 0;
+    }
+    .information {
+        margin: 25px;
+    }
+    .contact {
+        flex-direction: column;
+    }
+    .rightbox {
+        margin-top: 25px;
+        min-height: 400px;
     }
 }
